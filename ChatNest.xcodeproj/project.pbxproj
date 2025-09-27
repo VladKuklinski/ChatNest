@@ -48,7 +48,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		F5B3FA7E2E6CB259006EB921 /* Exceptions for "MyNewMessanger" folder in "MyNewMessanger" target */ = {
+		F5B3FA7E2E6CB259006EB921 /* Exceptions for "ChatNest" folder in "MyNewMessanger" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -58,22 +58,22 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		F599A60F2E79B83900BC89CD /* MyNewMessangerTests */ = {
+		F599A60F2E79B83900BC89CD /* ChatNest_Tests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MyNewMessangerTests;
+			path = ChatNest_Tests;
 			sourceTree = "<group>";
 		};
-		F5B3A73C2E3BCAC800439175 /* MyNewMessanger */ = {
+		F5B3A73C2E3BCAC800439175 /* ChatNest */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				F5B3FA7E2E6CB259006EB921 /* Exceptions for "MyNewMessanger" folder in "MyNewMessanger" target */,
+				F5B3FA7E2E6CB259006EB921 /* Exceptions for "ChatNest" folder in "MyNewMessanger" target */,
 			);
-			path = MyNewMessanger;
+			path = ChatNest;
 			sourceTree = "<group>";
 		};
-		F5B6EC0D2E7D65CD0093E8EB /* MyNewMessanger_UITests */ = {
+		F5B6EC0D2E7D65CD0093E8EB /* ChatNest_UITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MyNewMessanger_UITests;
+			path = ChatNest_UITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -120,9 +120,9 @@
 		F5B3A7312E3BCAC800439175 = {
 			isa = PBXGroup;
 			children = (
-				F5B3A73C2E3BCAC800439175 /* MyNewMessanger */,
-				F599A60F2E79B83900BC89CD /* MyNewMessangerTests */,
-				F5B6EC0D2E7D65CD0093E8EB /* MyNewMessanger_UITests */,
+				F5B3A73C2E3BCAC800439175 /* ChatNest */,
+				F599A60F2E79B83900BC89CD /* ChatNest_Tests */,
+				F5B6EC0D2E7D65CD0093E8EB /* ChatNest_UITests */,
 				F5B3A73B2E3BCAC800439175 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -155,7 +155,7 @@
 				F599A6132E79B83900BC89CD /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				F599A60F2E79B83900BC89CD /* MyNewMessangerTests */,
+				F599A60F2E79B83900BC89CD /* ChatNest_Tests */,
 			);
 			name = MyNewMessangerTests;
 			packageProductDependencies = (
@@ -177,7 +177,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				F5B3A73C2E3BCAC800439175 /* MyNewMessanger */,
+				F5B3A73C2E3BCAC800439175 /* ChatNest */,
 			);
 			name = MyNewMessanger;
 			packageProductDependencies = (
@@ -227,7 +227,7 @@
 				F5B6EC132E7D65CD0093E8EB /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				F5B6EC0D2E7D65CD0093E8EB /* MyNewMessanger_UITests */,
+				F5B6EC0D2E7D65CD0093E8EB /* ChatNest_UITests */,
 			);
 			name = MyNewMessanger_UITests;
 			packageProductDependencies = (
