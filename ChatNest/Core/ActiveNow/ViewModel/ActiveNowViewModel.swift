@@ -18,8 +18,6 @@ class ActiveNowViewModel : ObservableObject {
         observeUserStatus()
     }
     
-    
-    
     private func observeUserStatus() {
         manager.observeStatus(for: user.uid ?? "") { isActive, lastActivity in
             DispatchQueue.main.async {
@@ -27,9 +25,6 @@ class ActiveNowViewModel : ObservableObject {
                 self.user.lastActive = lastActivity
             }
         }
-        
-        
-        
     }
     
     var color : Color {

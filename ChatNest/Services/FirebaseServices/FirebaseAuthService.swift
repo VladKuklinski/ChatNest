@@ -9,7 +9,6 @@ import Foundation
 import FirebaseAuth
 
 class FirebaseAuthService : FirebaseAuthServiceProtocol {
-    
     var currentUserUid: String? {
         Auth.auth().currentUser?.uid
     }

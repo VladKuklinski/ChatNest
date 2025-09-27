@@ -22,7 +22,6 @@ struct ChatMessageCell: View {
                     .background(.blue)
                     .clipShape(ChatBubble(FromCurrentUser: isFromCurrentUser))
                     .frame(maxWidth: UIScreen.main.bounds.maxX / 1.5, alignment: .trailing)
-                    
             }
         } else {
             HStack(alignment: .bottom) {

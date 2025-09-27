@@ -52,7 +52,6 @@ class InboxViewModel: ObservableObject {
             try await friendStore.fetchAllRequests()
         }
     }
-    
     @MainActor
     func filterActiveUsers() async throws {
         guard let currentUid = authService.currentUserUid else {return}
@@ -60,11 +59,8 @@ class InboxViewModel: ObservableObject {
         let users = fetchedUsers
             .filter{$0.uid != currentUid}
         self.users = users
-        
-        
         print("online users filtered and sorted")
     }
-    
     private func setupSubscribers() {
         userService.currentUserPublisher
             .receive(on: DispatchQueue.main)
@@ -74,17 +70,13 @@ class InboxViewModel: ObservableObject {
             }
             .store(in: &cancellables)
     }
-    
     func loadRecentMessages() {
         observingMessagesService.observeRecentMessages { [weak self] messages in
             self?.recentMessages = messages
-            
         }
     }
-    
     func isFriend(_ otherUser : User) -> Bool {
         return friendStore.friends.contains(where: { $0.uid == otherUser.uid })
     }
-
 }
 

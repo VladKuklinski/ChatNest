@@ -16,14 +16,11 @@ struct ProfileView: View {
     @State var showErrorAlert = false
     @State var showLogOutAlert = false
     
-    
     var body: some View {
-        
         NavigationStack {
             VStack {
                 Spacer()
                     .frame(height: 20)
-                
                 PhotosPicker(selection: $viewModel.selectedImage) {
                     ZStack(alignment: .bottomTrailing) {
                         AvatarView(tempImage: viewModel.tempImage,
@@ -37,14 +34,9 @@ struct ProfileView: View {
                             Image(systemName: "camera.fill")
                                 .foregroundStyle(.black)
                                 .font(.system(size: 14))
-                            
                         }
-                        
                     }
                 }
-                
-                
-                
                 Text(user.fullName)
                     .font(.title)
                     .fontWeight(.semibold)
@@ -56,7 +48,6 @@ struct ProfileView: View {
                             Image(systemName: element.image)
                                 .foregroundStyle(element.backGroundColor)
                                 .font(.title)
-                            
                             Text(element.title)
                                 .font(.title3)
                                 .padding(.horizontal, 5)
@@ -71,7 +62,6 @@ struct ProfileView: View {
                         showDeleteAlert.toggle()
                     }
                 }
-                
             }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {

@@ -3,28 +3,20 @@ import FirebaseAuth
 import FirebaseDatabase
 
 class ActivityStatusManager: ActivityStatusManagerProtocol {
-    
-    
     private var ref: DatabaseReference?
-    
     func setupOnlineStatus(for uid : String) {
         ref = Database.database().reference(withPath: "status/\(uid)")
-        
         let onlineObject: [String: Any] = [
             "isActive": true,
             "lastActive": ServerValue.timestamp()
         ]
-        
         let offlineObject: [String: Any] = [
             "isActive": false,
             "lastActive": ServerValue.timestamp()
         ]
-        
         ref?.onDisconnectSetValue(offlineObject)
-        
         ref?.setValue(onlineObject)
     }
-    
     func setupOfflineStatus(for uid : String) {
             let ref = Database.database().reference(withPath: "status/\(uid)")
             
@@ -33,7 +25,6 @@ class ActivityStatusManager: ActivityStatusManagerProtocol {
                 "lastActive": ServerValue.timestamp()
             ])
     }
-    
     func deleteStatus(for uid: String) {
         let ref = Database.database().reference(withPath: "status/\(uid)")
         ref.removeValue { error, _ in
@@ -44,7 +35,6 @@ class ActivityStatusManager: ActivityStatusManagerProtocol {
             }
         }
     }
-    
     func observeStatus(for uid: String, onUpdate: @escaping (Bool, Date) -> Void) {
         ref = Database.database().reference(withPath: "status/\(uid)")
         ref?.observe(.value) { snapshot in
@@ -56,5 +46,4 @@ class ActivityStatusManager: ActivityStatusManagerProtocol {
             }
         }
     }
-
 }

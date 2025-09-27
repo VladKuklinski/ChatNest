@@ -17,28 +17,23 @@ class ProfileViewModel: ObservableObject {
         }
     }
     private var cancellables = Set<AnyCancellable>()
-    
     init(userService : UserServiceProtocol, authService : AuthServiceProtocol) {
         self.userService = userService
         self.authService = authService
-
         userService.currentUserPublisher
             .receive(on: DispatchQueue.main)
             .sink { [weak self] fetchedUser in
                 self?.user = fetchedUser
             }
             .store(in: &cancellables)
-        
         Task {
             if userService.currentUser == nil {
                 try? await userService.fetchUserData(uid: nil)
             }
         }
     }
-    
     @Published var user: User?
     @Published var tempImage: Image?
-    
     private func loadImage() async {
         guard let image = selectedImage else { return }
         do {
@@ -47,7 +42,6 @@ class ProfileViewModel: ObservableObject {
                 await MainActor.run {
                     self.tempImage = Image(uiImage: uiImage)
                 }
-                
                 Task {
                     try await self.uploadProfileImage(uiImage)
                 }
@@ -56,15 +50,12 @@ class ProfileViewModel: ObservableObject {
             print("DEBUG: Failed to load image \(error.localizedDescription)")
         }
     }
-    
     private func uploadProfileImage(_ image: UIImage) async throws {
         guard let uid = Auth.auth().currentUser?.uid,
               let data = image.jpegData(compressionQuality: 0.5) else { return }
-        
         let ref = Storage.storage().reference(withPath: "\(Constants.imageLocation + uid).jpg")
         _ = try await ref.putDataAsync(data)
         let url = try await ref.downloadURL()
-        
         try await Firestore.firestore().collection("users").document(uid).updateData([
             "imageUrl": url.absoluteString
         ])
@@ -73,7 +64,6 @@ class ProfileViewModel: ObservableObject {
             userService.currentUser?.imageUrl = url.absoluteString
         }
     }
-    
     func signOut() async {
         do {
             try await authService.signOut()
@@ -82,7 +72,6 @@ class ProfileViewModel: ObservableObject {
             showErrorAlert.toggle()
         }
     }
-    
     func deleteAccount() async {
         do {
             try await authService.deleteAccount()

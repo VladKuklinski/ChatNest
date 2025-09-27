@@ -12,20 +12,18 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class FacebookAuthService: FacebookAuthServiceProtocol {
-    private var userService : UserServiceProtocol
-    private var authService : AuthServiceProtocol
-    
-    init(userService: UserServiceProtocol, authService : AuthServiceProtocol) {
+    private var userService: UserServiceProtocol
+    private var authService: AuthServiceProtocol
+
+    init(userService: UserServiceProtocol, authService: AuthServiceProtocol) {
         self.userService = userService
         self.authService = authService
     }
-    
+
     func login() async throws -> FirebaseAuth.User {
-        
         let token = try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<String, Error>) in
             Task { @MainActor in
                 let loginManager = LoginManager()
-                
                 loginManager.logIn(permissions: ["public_profile", "email"], from: nil) { result, error in
                     if let error = error {
                         continuation.resume(throwing: error)
@@ -39,33 +37,32 @@ class FacebookAuthService: FacebookAuthServiceProtocol {
                 }
             }
         }
-        
+
         let credential = FacebookAuthProvider.credential(withAccessToken: token)
         let authResult = try await Auth.auth().signIn(with: credential)
         let firebaseUser = authResult.user
-        
         let fbImageUrl = try await fetchFacebookProfileImage()
-        
+
         try await userService.fetchUserData(uid: nil)
         let currentUser = userService.currentUser
-        
         let fullName = currentUser?.fullName ?? firebaseUser.displayName ?? "New User"
         let email = firebaseUser.email ?? ""
         let imageUrl = fbImageUrl ?? firebaseUser.photoURL?.absoluteString
-        
-        let newUser = User(uid: firebaseUser.uid,
-                           fullName: fullName,
-                           email: email,
-                           imageUrl: imageUrl,
-                           isActive: true,
-                           lastActive: Date())
-        
+
+        let newUser = User(
+            uid: firebaseUser.uid,
+            fullName: fullName,
+            email: email,
+            imageUrl: imageUrl,
+            isActive: true,
+            lastActive: Date()
+        )
+
         try await authService.uploadUserData(user: newUser)
         userService.currentUser = newUser
         return firebaseUser
-        
     }
-    
+
     private func fetchFacebookProfileImage() async throws -> String? {
         return try await withCheckedThrowingContinuation { continuation in
             let request = GraphRequest(
@@ -75,13 +72,12 @@ class FacebookAuthService: FacebookAuthServiceProtocol {
                 version: nil,
                 httpMethod: .get
             )
-            
+
             request.start { _, result, error in
                 if let error = error {
                     continuation.resume(throwing: error)
                     return
                 }
-                
                 if let dict = result as? [String: Any],
                    let picture = dict["picture"] as? [String: Any],
                    let data = picture["data"] as? [String: Any],

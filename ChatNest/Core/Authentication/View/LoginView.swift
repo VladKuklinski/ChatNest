@@ -53,8 +53,6 @@ struct LoginView: View {
                         }
                         .padding(.horizontal, 12)
                     }
-                    
-                    
                     NavigationLink {
                         PasswordResetView()
                     } label: {
@@ -68,12 +66,10 @@ struct LoginView: View {
                 VStack(spacing: 12) {
                     Button {
                         Task {
-                            
                             await viewModel.login()
                             if viewModel.errorMessage != nil {
                                 showErrorAlert.toggle()
                             }
-                            
                         }
                     } label: {
                         Text("Login")
@@ -98,10 +94,6 @@ struct LoginView: View {
                     FacebookLoginButtonView()
                             .frame(height: 44)
                             .padding()
-                    
-                    
-                    
-                    
                 }
                 Spacer()
                 Divider()
@@ -117,7 +109,6 @@ struct LoginView: View {
                     }
                 }
             }
-            
             .padding(.horizontal, 15)
             .alert("Error", isPresented: $showErrorAlert, presenting: viewModel.errorMessage) { _ in
                 Button("OK", role: .cancel) {
@@ -127,7 +118,6 @@ struct LoginView: View {
             } message: { message in
                 Text(message)
             }
-            
         }
     }
 }

@@ -18,7 +18,6 @@ class EditDataViewModel : ObservableObject{
     private let firestoreService : FirestoreServiceProtocol
     private let authService : AuthServiceProtocol
     
-    
     init(userService: UserServiceProtocol,
          firestoreService : FirestoreServiceProtocol = FirestoreService(),
          authService : AuthServiceProtocol
@@ -27,7 +26,6 @@ class EditDataViewModel : ObservableObject{
         self.firestoreService = firestoreService
         self.authService = authService
     }
-    
     func changeName(newName : String) async throws {
         do {
             guard let currentUserUid = userService.currentUser?.uid else {return}
@@ -39,7 +37,6 @@ class EditDataViewModel : ObservableObject{
             }
         }
     }
-    
     func changeEmail(to newEmail : String) async throws {
         do {
             try await authService.updateEmail(newEmail: newEmail)

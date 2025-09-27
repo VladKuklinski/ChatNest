@@ -15,7 +15,6 @@ struct NewMessageView: View {
     var user : User
     @EnvironmentObject var friendStore :  FriendsStore
     
-    
     init(selectedUser: Binding<User?>,
          user : User,
          userService: UserServiceProtocol = UserService.shared,
@@ -29,12 +28,8 @@ struct NewMessageView: View {
         _viewModel = StateObject(wrappedValue: NewMessageViewModel(
             userService: userService, friendStore: friendStore
         ))
-        
-        
     }
-    
     var currentUser = Auth.auth().currentUser?.uid
-    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -49,9 +44,7 @@ struct NewMessageView: View {
                         .font(.title3)
                         .fontWeight(.semibold)
                         .padding(.bottom, 15)
-                    
                     ForEach(viewModel.sortedUsers) { oneUser in
-                        
                         HStack {
                             HStack {
                                 AvatarView(tempImage: nil,
@@ -64,7 +57,6 @@ struct NewMessageView: View {
                                 selectedUser = oneUser
                                 dismiss()
                             }
-                            
                             Spacer()
                             HStack {
                                 if friendStore.isFriend(otherUser: oneUser) {
@@ -81,7 +73,6 @@ struct NewMessageView: View {
                                                 .foregroundColor(.primary)
                                         }
                                     }
-                                    
                                 } else if friendStore.hasSentRequest(to: oneUser) {
                                     HStack {
                                         Image(systemName: "person.fill.checkmark")
@@ -95,7 +86,6 @@ struct NewMessageView: View {
                                            try await friendStore.cancelRequest(to: oneUser)
                                         }
                                     }
-                                    
                                 } else if
                                           friendStore.hasIncomingRequest(from: oneUser) {
                                     HStack {
@@ -122,8 +112,6 @@ struct NewMessageView: View {
                                             }
                                         }
                                     }
-                                    
-                                    
                                 } else {
                                     HStack {
                                         Image(systemName: "person.fill.badge.plus")
@@ -144,7 +132,6 @@ struct NewMessageView: View {
                 .padding(.horizontal, 10)
             }
             .navigationTitle("New Message")
-            
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
@@ -154,7 +141,6 @@ struct NewMessageView: View {
                     }
                 }
             }
-            
         }
         .onAppear {
             Task {
@@ -162,9 +148,7 @@ struct NewMessageView: View {
                 try await friendStore.fetchFriends()
             }
         }
-        
     }
-        
 }
 
 

@@ -23,8 +23,6 @@ struct ChangeEmailView: View {
                     .background(Color(.systemGroupedBackground))
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .padding(.vertical, 5)
-
-                
                 Spacer()
                     .frame(height: 20)
                 Button {
@@ -56,23 +54,22 @@ struct ChangeEmailView: View {
                             Text("Back")
                         }
                     }
-
                 }
             }
             .navigationBarBackButtonHidden(true)
             .navigationTitle("Change your email")
             .navigationBarTitleDisplayMode(.large)
             .alert("Changing email", isPresented: $showAlert, presenting: viewModel.message) { _ in
-            if viewModel.sentWithSuccess {
-                Button("OK") {
-                    dismiss()
+                if viewModel.sentWithSuccess {
+                    Button("OK") {
+                        dismiss()
+                    }
+                } else {
+                    Button("OK", role: .cancel) {}
                 }
-            } else {
-                Button("OK", role: .cancel) {}
+            } message: { message in
+                Text(message)
             }
-        } message: { message in
-            Text(message)
-        }
         }
     }
 }

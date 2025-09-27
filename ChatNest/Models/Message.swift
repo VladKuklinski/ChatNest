@@ -16,15 +16,12 @@ struct Message : Identifiable, Hashable, Codable {
     var messageText : String
     var timestamp : Timestamp
     var user: User?
-    
     var id : String {
         return messageId ?? UUID().uuidString
     }
-    
     var chatPartnerId : String {
         fromId == Auth.auth().currentUser?.uid ? toId : fromId
         }
-    
     var fromCurrentUser : Bool {
         fromId == Auth.auth().currentUser?.uid
     }

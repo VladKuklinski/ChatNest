@@ -25,8 +25,6 @@ struct PasswordResetView: View {
                     .background(Color(.systemGroupedBackground))
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .padding(.vertical, 5)
-
-                
                 Spacer()
                     .frame(height: 20)
                 Button {
@@ -58,7 +56,6 @@ struct PasswordResetView: View {
                             Text("Back")
                         }
                     }
-
                 }
             }
             .navigationBarBackButtonHidden(true)

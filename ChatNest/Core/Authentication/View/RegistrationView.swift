@@ -15,8 +15,6 @@ struct RegistrationView: View {
     @State var repeatPassword = ""
     @State var showAlert = false
     
-    
-    
     var body: some View {
         VStack {
             Spacer()
@@ -40,20 +38,17 @@ struct RegistrationView: View {
                     }
                 }
             }
-            
             .onChange(of: viewModel.selectedImage) {
                 Task { @MainActor in
                     try? await viewModel.setImage()
                 }
             }
-            
             .onChange(of: viewModel.profileImage) { _, newValue in
                 Task { @MainActor in
                     displayedImage = newValue
                 }
             }
             VStack(alignment: .trailing, spacing: 10) {
-                
                 TextField("Write your full name", text: $viewModel.fullName)
                     .autocorrectionDisabled(true)
                     .padding(12)
@@ -66,7 +61,6 @@ struct RegistrationView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                 Spacer()
                     .frame(height: 20)
-                
                 SecureField("Write password", text: $viewModel.password)
                     .textContentType(.none)
                     .padding(12)
@@ -99,8 +93,6 @@ struct RegistrationView: View {
                     if isLoading {
                         ProgressView()
                             .animation(nil, value: isLoading)
-                        
-                        
                     } else {
                         Text("Sign in")
                             .frame(maxWidth: .infinity)
@@ -128,7 +120,6 @@ struct RegistrationView: View {
             }
             Spacer()
             Spacer()
-            
             Divider()
                 .padding(.bottom)
             Button {
@@ -138,7 +129,6 @@ struct RegistrationView: View {
                     Text("Have an account already?")
                     Text("Log in")
                         .fontWeight(.semibold)
-                    
                 }
             }
         }

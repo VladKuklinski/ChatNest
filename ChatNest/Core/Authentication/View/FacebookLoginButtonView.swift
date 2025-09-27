@@ -23,8 +23,6 @@ struct FacebookLoginButtonView: View {
     
     @EnvironmentObject var contentViewModel: ContentViewModel
     @State var isLoading = false
-
-    
     var body: some View {
         Button {
             isLoading = true

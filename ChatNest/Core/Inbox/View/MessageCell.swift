@@ -19,7 +19,6 @@ struct MessageCell: View {
                     .foregroundStyle(.gray)
                     .lineLimit(1)
             }
-
             Spacer()
             Text(message.timestamp.dateValue(), style: .time)
                 .font(.caption)

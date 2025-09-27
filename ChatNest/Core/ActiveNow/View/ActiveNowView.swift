@@ -29,7 +29,6 @@ struct ActiveNowView: View {
                 Circle()
                     .foregroundStyle(viewModel.color)
                     .frame(height: 14)
-
             }
         }
     }

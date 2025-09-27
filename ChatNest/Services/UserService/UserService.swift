@@ -10,35 +10,30 @@ import FirebaseFirestore
 import FirebaseAuth
 import Combine
 
-class UserService : ObservableObject, UserServiceProtocol {
-    @Published var currentUser : User? 
-    
+class UserService: ObservableObject, UserServiceProtocol {
+    @Published var currentUser: User?
     static let shared = UserService()
-    
+
     var currentUserPublisher: AnyPublisher<User?, Never> {
         $currentUser.eraseToAnyPublisher()
     }
+
     @MainActor
-    func fetchUserData(uid : String?) async throws {
+    func fetchUserData(uid: String?) async throws {
         let uidToUse = uid ?? Auth.auth().currentUser?.uid
-            print("DEBUG : unable to fetch user data ")
-            
         guard let uid = uidToUse, !uid.isEmpty else {
-                print("DEBUG: fetchUserData -> no uid available")
-                return
-            }
-        
-        let snapshot = try await Firestore
-            .firestore()
-            .collection("users")
-            .document(uid)
-            .getDocument()
+            print("DEBUG: fetchUserData -> no uid available")
+            return
+        }
+
+        let snapshot = try await Firestore.firestore().collection("users").document(uid).getDocument()
         print("DEBUG: fetchUserData snapshot.exists = \(snapshot.exists), data = \(snapshot.data() ?? [:]) for uid \(uid)")
 
         guard snapshot.exists else {
             print("DEBUG: fetchUserData -> no document for uid \(uid)")
             return
         }
+
         do {
             let user = try snapshot.data(as: User.self)
             self.currentUser = user
@@ -47,10 +42,10 @@ class UserService : ObservableObject, UserServiceProtocol {
             print("DEBUG: fetchUserData decode error -> \(error)")
         }
     }
-    
+
     func fetchAllUsers() async throws -> [User] {
         let snapshot = try await Firestore.firestore().collection("users").getDocuments()
-        let users = snapshot.documents.compactMap({try? $0.data(as: User.self)})
-        return users
+        return snapshot.documents.compactMap { try? $0.data(as: User.self) }
     }
 }
+

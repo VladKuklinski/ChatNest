@@ -14,7 +14,6 @@ class ChatViewModel : ObservableObject {
     private let sendingMessageService : SendingMessageServiceProtocol
     private let observingMessageService : ObservingMessageServiceProtocol
 
-    
     init(user: User,
          sendingMessageService : SendingMessageServiceProtocol,
          observingMessageService : ObservingMessageServiceProtocol) {
@@ -23,14 +22,11 @@ class ChatViewModel : ObservableObject {
         self.observingMessageService = observingMessageService
         observeMessages()
     }
-    
-    
     func observeMessages() {
         observingMessageService.observeMessages(chatPartner: user) { messages in
             self.messages.append(contentsOf: messages)
         }
     }
-    
     func sendMessage() {
         sendingMessageService.sendMessage(textMessage, toUser: user)
     }

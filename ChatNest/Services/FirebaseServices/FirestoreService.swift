@@ -9,7 +9,6 @@ import FirebaseFirestore
 class FirestoreService: FirestoreServiceProtocol {
     func changeUserName(uid: String, newName: String) async throws {
         do {
-            
             try await Firestore.firestore()
                 .collection("users")
                 .document(uid)

@@ -12,5 +12,4 @@ protocol ActivityStatusManagerProtocol {
     func setupOfflineStatus(for uid : String)
     func observeStatus(for uid: String, onUpdate: @escaping (Bool, Date) -> Void)
     func deleteStatus(for uid: String)
-
 }

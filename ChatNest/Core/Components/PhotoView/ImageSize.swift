@@ -12,7 +12,6 @@ enum ImageSize {
     
     var size : CGFloat {
         switch self {
-            
         case .xxsmall:
             25
         case .xsmall:
@@ -30,6 +29,5 @@ enum ImageSize {
         case .xxxlarge:
             136
         }
-        
     }
 }

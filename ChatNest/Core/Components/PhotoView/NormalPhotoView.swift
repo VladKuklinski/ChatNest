@@ -12,14 +12,12 @@ struct NormalPhotoView: View {
     let size : ImageSize
     var body: some View {
         
-        
         if let image = user.imageUrl {
             Image(image)
                 .resizable()
                 .scaledToFill()
                 .frame(width: size.size, height: size.size)
                 .clipShape(Circle())
-            
         } else {
             Image(systemName: "person.circle.fill")
                 .resizable()
@@ -27,7 +25,6 @@ struct NormalPhotoView: View {
                 .frame(width: size.size, height: size.size)
                 .clipShape(Circle())
         }
-        
     }
 }
 

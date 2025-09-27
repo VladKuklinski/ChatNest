@@ -32,8 +32,6 @@ class FacebookLoginButtonViewModel: ObservableObject{
 
             contentViewModel.currentUser = user
             activityManager.setupOnlineStatus(for: user.uid)
-            
-            
         } catch {
             errorMessage = error.localizedDescription
         }

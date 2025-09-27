@@ -17,7 +17,6 @@ struct EditDataView: View {
     @State var showPasswordChange = false
     @Environment(\.dismiss) var dismiss
 
-    
     var body: some View {
         NavigationStack {
             List {
@@ -28,7 +27,6 @@ struct EditDataView: View {
                     .padding(.vertical, 5)
                     .background(.white)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
-                
                 }
                 if let email = Auth.auth().currentUser?.email {
                     Section {
@@ -46,8 +44,6 @@ struct EditDataView: View {
                                     .foregroundStyle(Color(.systemGray))
                             }
                         }
-
-                        
                         Button {
                             showPasswordChange.toggle()
                         } label: {
@@ -60,7 +56,6 @@ struct EditDataView: View {
                             }
                         }
                     }
-                    
                 }
             }
             .fullScreenCover(isPresented: $showEmailChange, content: {
@@ -82,7 +77,6 @@ struct EditDataView: View {
                 }
             }
         }
-        
     }
 }
 

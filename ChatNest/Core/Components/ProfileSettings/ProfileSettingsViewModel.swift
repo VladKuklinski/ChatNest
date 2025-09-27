@@ -10,11 +10,9 @@ import SwiftUI
 
 enum ProfileSettings : String, CaseIterable, Identifiable {
     case darkMode, activeStatus, accessibility, privacyAndSafety, notifications
-    
     var id : String {
         self.rawValue
     }
-    
     var title : String {
         switch self {
         case .darkMode:
@@ -29,7 +27,6 @@ enum ProfileSettings : String, CaseIterable, Identifiable {
             "Notifications"
         }
     }
-    
     var image: String {
             switch self {
             case .darkMode: 
@@ -44,7 +41,6 @@ enum ProfileSettings : String, CaseIterable, Identifiable {
                 return "bell.circle.fill"
             }
         }
-    
     var backGroundColor : Color {
         switch self {
         case .darkMode:

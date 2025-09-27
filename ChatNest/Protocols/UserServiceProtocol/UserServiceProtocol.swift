@@ -9,13 +9,8 @@ import Foundation
 import Combine
 
 protocol UserServiceProtocol {
-    
     var currentUserPublisher: AnyPublisher<User?, Never> {get}
-    
     var currentUser: User? { get set }
-    
     func fetchUserData(uid : String?) async throws
-    
     func fetchAllUsers() async throws -> [User]
-    
 }

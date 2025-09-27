@@ -169,6 +169,7 @@
 			buildConfigurationList = F5B3A7452E3BCACA00439175 /* Build configuration list for PBXNativeTarget "ChatNest" */;
 			buildPhases = (
 				F5B3A7362E3BCAC800439175 /* Sources */,
+				F54FC2182E87E3D6003BB274 /* ShellScript */,
 				F5B3A7372E3BCAC800439175 /* Frameworks */,
 				F5B3A7382E3BCAC800439175 /* Resources */,
 			);
@@ -320,6 +321,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F54FC2182E87E3D6003BB274 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F599A60A2E79B83900BC89CD /* Sources */ = {
@@ -540,7 +561,7 @@
 				DEVELOPMENT_TEAM = N8QP4XQ6BH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyNewMessanger/Info.plist;
+				INFOPLIST_FILE = ChatNest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -569,7 +590,7 @@
 				DEVELOPMENT_TEAM = N8QP4XQ6BH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyNewMessanger/Info.plist;
+				INFOPLIST_FILE = ChatNest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

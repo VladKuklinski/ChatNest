@@ -52,10 +52,7 @@ struct AvatarView: View {
                     }
                 }
             }
-
-                
         } else {
-
             Image(systemName: "person.crop.circle.fill")
                 .resizable()
                 .foregroundStyle(.green)
@@ -63,8 +60,6 @@ struct AvatarView: View {
                 .frame(width: size.size, height: size.size)
                 .clipShape(Circle())
         }
-        
-        
     }
 }
 

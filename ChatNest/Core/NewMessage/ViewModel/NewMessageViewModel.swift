@@ -19,15 +19,12 @@ class NewMessageViewModel : ObservableObject {
     @Published var users : [User] = []
     @Published var searchText : String = ""
     
-    
     var sortedUsers : [User] {
         let filtered = users.filter { user in
             guard !searchText.isEmpty else { return true }
             let lowercasedSearch = searchText.lowercased()
             return user.fullName.lowercased().contains(lowercasedSearch)
-            
         }
-
         return filtered.sorted {
             let lhsIsFriend = friendStore.isFriend(otherUser: $0)
             let rhsIsFriend = friendStore.isFriend(otherUser: $1)
@@ -38,9 +35,6 @@ class NewMessageViewModel : ObservableObject {
             }
         }
     }
-    
-    
-    
     init(userService : UserServiceProtocol,
          friendStore : FriendsStore
     ) {
@@ -59,6 +53,5 @@ class NewMessageViewModel : ObservableObject {
         self.users = users.filter({$0.id != currentUid})
         print("users fetched and filtered")
     }
-    
 }
 

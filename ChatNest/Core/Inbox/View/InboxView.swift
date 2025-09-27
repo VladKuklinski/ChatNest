@@ -26,11 +26,9 @@ struct InboxView: View {
         _viewModel = StateObject(wrappedValue: InboxViewModel(
             observingMessagesService: observingMessagesService, friendStore: friendStore))
     }
-    
     var user : User? {
         return viewModel.currentUser
     }
-    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -62,7 +60,6 @@ struct InboxView: View {
                                 .buttonStyle(.plain)
                             }
                         } else {
-                            
                             VStack {
                                 Text("No chats yet")
                                     .fontWeight(.semibold)
@@ -79,34 +76,25 @@ struct InboxView: View {
                                     Text("in the right corner")
                                 }
                             }
-                            
                         }
                     }
                     .padding(.horizontal, 9)
                 }
             }
-            
             .navigationDestination(item: $selectedUser, destination: { notNilUser in
-                
                 ChatView(user: notNilUser)
-                
             })
             .fullScreenCover(isPresented: $showNewMessageScreen, content: {
                 if let user {
                     NewMessageView(selectedUser: $selectedUser,
                                    user: user, friendStore: friendsStore)
                     .environmentObject(friendsStore)
-                    
-                    
                 }
             })
-            
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    
                     if let user {
-                        
                         NavigationLink {
                             ProfileView(user: user)
                         } label: {
@@ -115,13 +103,9 @@ struct InboxView: View {
                                        size: .xsmall)
                             .accessibilityIdentifier("myImageID")
                         }
-                        
                     } else {
                         ProgressView()
                     }
-                    
-                    
-                    
                 }
                 ToolbarItem(placement: .principal) {
                     VStack {
@@ -129,26 +113,18 @@ struct InboxView: View {
                         .font(.largeTitle)
                         .fontWeight(.bold)
                     }
-                    
                 }
-                
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         showNewMessageScreen = true
-                        
                     } label: {
                         Image(systemName: "square.and.pencil")
                             .resizable()
                             .foregroundStyle(Color(.black))
                             .frame(width: 25, height: 25)
                     }
-                    
                 }
-                
             }
-            
         }
-        
     }
-        
 }

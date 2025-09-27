@@ -16,11 +16,9 @@ struct User : Codable, Identifiable, Hashable, Equatable{
     var imageUrl : String?
     var isActive : Bool
     var lastActive: Date
-    
     var friends: [String] = []
     var incomingRequests: [String] = []
     var outgoingRequests: [String] = []
-    
     var id : String {
         return uid ?? email
     }
@@ -32,7 +30,6 @@ struct User : Codable, Identifiable, Hashable, Equatable{
         }
     }
 }
-
 enum ActivityStatus : Equatable {
     case online
     case offline

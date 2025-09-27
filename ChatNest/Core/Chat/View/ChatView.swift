@@ -18,7 +18,6 @@ struct ChatView: View {
                                                                   sendingMessageService: SendingMessageService(),
                                                                   observingMessageService: ObservingMessageService()))
     }
-    
     var body: some View {
         VStack {
             ScrollView {
