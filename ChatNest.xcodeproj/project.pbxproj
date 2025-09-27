@@ -41,19 +41,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F599A60E2E79B83900BC89CD /* MyNewMessangerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyNewMessangerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5B3A73A2E3BCAC800439175 /* MyNewMessanger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNewMessanger.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5B6EBFB2E7C0A390093E8EB /* MyNewMessangerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyNewMessangerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5B6EC0C2E7D65CD0093E8EB /* MyNewMessanger_UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyNewMessanger_UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F599A60E2E79B83900BC89CD /* ChatNestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatNestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5B3A73A2E3BCAC800439175 /* ChatNest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatNest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5B6EBFB2E7C0A390093E8EB /* ChatNestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatNestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5B6EC0C2E7D65CD0093E8EB /* ChatNest_UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatNest_UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		F5B3FA7E2E6CB259006EB921 /* Exceptions for "ChatNest" folder in "MyNewMessanger" target */ = {
+		F5B3FA7E2E6CB259006EB921 /* Exceptions for "ChatNest" folder in "ChatNest" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = F5B3A7392E3BCAC800439175 /* MyNewMessanger */;
+			target = F5B3A7392E3BCAC800439175 /* ChatNest */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -66,7 +66,7 @@
 		F5B3A73C2E3BCAC800439175 /* ChatNest */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				F5B3FA7E2E6CB259006EB921 /* Exceptions for "ChatNest" folder in "MyNewMessanger" target */,
+				F5B3FA7E2E6CB259006EB921 /* Exceptions for "ChatNest" folder in "ChatNest" target */,
 			);
 			path = ChatNest;
 			sourceTree = "<group>";
@@ -130,10 +130,10 @@
 		F5B3A73B2E3BCAC800439175 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F5B3A73A2E3BCAC800439175 /* MyNewMessanger.app */,
-				F599A60E2E79B83900BC89CD /* MyNewMessangerTests.xctest */,
-				F5B6EBFB2E7C0A390093E8EB /* MyNewMessangerUITests.xctest */,
-				F5B6EC0C2E7D65CD0093E8EB /* MyNewMessanger_UITests.xctest */,
+				F5B3A73A2E3BCAC800439175 /* ChatNest.app */,
+				F599A60E2E79B83900BC89CD /* ChatNestTests.xctest */,
+				F5B6EBFB2E7C0A390093E8EB /* ChatNestUITests.xctest */,
+				F5B6EC0C2E7D65CD0093E8EB /* ChatNest_UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,9 +141,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F599A60D2E79B83900BC89CD /* MyNewMessangerTests */ = {
+		F599A60D2E79B83900BC89CD /* ChatNestTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F599A6142E79B83900BC89CD /* Build configuration list for PBXNativeTarget "MyNewMessangerTests" */;
+			buildConfigurationList = F599A6142E79B83900BC89CD /* Build configuration list for PBXNativeTarget "ChatNestTests" */;
 			buildPhases = (
 				F599A60A2E79B83900BC89CD /* Sources */,
 				F599A60B2E79B83900BC89CD /* Frameworks */,
@@ -157,16 +157,16 @@
 			fileSystemSynchronizedGroups = (
 				F599A60F2E79B83900BC89CD /* ChatNest_Tests */,
 			);
-			name = MyNewMessangerTests;
+			name = ChatNestTests;
 			packageProductDependencies = (
 			);
 			productName = MyNewMessangerTests;
-			productReference = F599A60E2E79B83900BC89CD /* MyNewMessangerTests.xctest */;
+			productReference = F599A60E2E79B83900BC89CD /* ChatNestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F5B3A7392E3BCAC800439175 /* MyNewMessanger */ = {
+		F5B3A7392E3BCAC800439175 /* ChatNest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F5B3A7452E3BCACA00439175 /* Build configuration list for PBXNativeTarget "MyNewMessanger" */;
+			buildConfigurationList = F5B3A7452E3BCACA00439175 /* Build configuration list for PBXNativeTarget "ChatNest" */;
 			buildPhases = (
 				F5B3A7362E3BCAC800439175 /* Sources */,
 				F5B3A7372E3BCAC800439175 /* Frameworks */,
@@ -179,7 +179,7 @@
 			fileSystemSynchronizedGroups = (
 				F5B3A73C2E3BCAC800439175 /* ChatNest */,
 			);
-			name = MyNewMessanger;
+			name = ChatNest;
 			packageProductDependencies = (
 				F5515E1A2E3D031E00FFD8DF /* FirebaseAuth */,
 				F5515E1C2E3D031E00FFD8DF /* FirebaseDatabase */,
@@ -190,12 +190,12 @@
 				F5B3FA782E6C3B86006EB921 /* FacebookLogin */,
 			);
 			productName = MyNewMessanger;
-			productReference = F5B3A73A2E3BCAC800439175 /* MyNewMessanger.app */;
+			productReference = F5B3A73A2E3BCAC800439175 /* ChatNest.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F5B6EBFA2E7C0A390093E8EB /* MyNewMessangerUITests */ = {
+		F5B6EBFA2E7C0A390093E8EB /* ChatNestUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F5B6EC052E7C0A390093E8EB /* Build configuration list for PBXNativeTarget "MyNewMessangerUITests" */;
+			buildConfigurationList = F5B6EC052E7C0A390093E8EB /* Build configuration list for PBXNativeTarget "ChatNestUITests" */;
 			buildPhases = (
 				F5B6EBF72E7C0A390093E8EB /* Sources */,
 				F5B6EBF82E7C0A390093E8EB /* Frameworks */,
@@ -206,16 +206,16 @@
 			dependencies = (
 				F5B6EC022E7C0A390093E8EB /* PBXTargetDependency */,
 			);
-			name = MyNewMessangerUITests;
+			name = ChatNestUITests;
 			packageProductDependencies = (
 			);
 			productName = MyNewMessangerUITests;
-			productReference = F5B6EBFB2E7C0A390093E8EB /* MyNewMessangerUITests.xctest */;
+			productReference = F5B6EBFB2E7C0A390093E8EB /* ChatNestUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		F5B6EC0B2E7D65CD0093E8EB /* MyNewMessanger_UITests */ = {
+		F5B6EC0B2E7D65CD0093E8EB /* ChatNest_UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F5B6EC142E7D65CD0093E8EB /* Build configuration list for PBXNativeTarget "MyNewMessanger_UITests" */;
+			buildConfigurationList = F5B6EC142E7D65CD0093E8EB /* Build configuration list for PBXNativeTarget "ChatNest_UITests" */;
 			buildPhases = (
 				F5B6EC082E7D65CD0093E8EB /* Sources */,
 				F5B6EC092E7D65CD0093E8EB /* Frameworks */,
@@ -229,11 +229,11 @@
 			fileSystemSynchronizedGroups = (
 				F5B6EC0D2E7D65CD0093E8EB /* ChatNest_UITests */,
 			);
-			name = MyNewMessanger_UITests;
+			name = ChatNest_UITests;
 			packageProductDependencies = (
 			);
 			productName = MyNewMessanger_UITests;
-			productReference = F5B6EC0C2E7D65CD0093E8EB /* MyNewMessanger_UITests.xctest */;
+			productReference = F5B6EC0C2E7D65CD0093E8EB /* ChatNest_UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -263,7 +263,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F5B3A7352E3BCAC800439175 /* Build configuration list for PBXProject "MyNewMessanger" */;
+			buildConfigurationList = F5B3A7352E3BCAC800439175 /* Build configuration list for PBXProject "ChatNest" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -282,10 +282,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F5B3A7392E3BCAC800439175 /* MyNewMessanger */,
-				F599A60D2E79B83900BC89CD /* MyNewMessangerTests */,
-				F5B6EBFA2E7C0A390093E8EB /* MyNewMessangerUITests */,
-				F5B6EC0B2E7D65CD0093E8EB /* MyNewMessanger_UITests */,
+				F5B3A7392E3BCAC800439175 /* ChatNest */,
+				F599A60D2E79B83900BC89CD /* ChatNestTests */,
+				F5B6EBFA2E7C0A390093E8EB /* ChatNestUITests */,
+				F5B6EC0B2E7D65CD0093E8EB /* ChatNest_UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -355,17 +355,17 @@
 /* Begin PBXTargetDependency section */
 		F599A6132E79B83900BC89CD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F5B3A7392E3BCAC800439175 /* MyNewMessanger */;
+			target = F5B3A7392E3BCAC800439175 /* ChatNest */;
 			targetProxy = F599A6122E79B83900BC89CD /* PBXContainerItemProxy */;
 		};
 		F5B6EC022E7C0A390093E8EB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F5B3A7392E3BCAC800439175 /* MyNewMessanger */;
+			target = F5B3A7392E3BCAC800439175 /* ChatNest */;
 			targetProxy = F5B6EC012E7C0A390093E8EB /* PBXContainerItemProxy */;
 		};
 		F5B6EC132E7D65CD0093E8EB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F5B3A7392E3BCAC800439175 /* MyNewMessanger */;
+			target = F5B3A7392E3BCAC800439175 /* ChatNest */;
 			targetProxy = F5B6EC122E7D65CD0093E8EB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -385,7 +385,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyNewMessanger.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyNewMessanger";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatNest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChatNest";
 			};
 			name = Debug;
 		};
@@ -403,7 +403,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyNewMessanger.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyNewMessanger";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatNest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChatNest";
 			};
 			name = Release;
 		};
@@ -659,7 +659,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F599A6142E79B83900BC89CD /* Build configuration list for PBXNativeTarget "MyNewMessangerTests" */ = {
+		F599A6142E79B83900BC89CD /* Build configuration list for PBXNativeTarget "ChatNestTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F599A6152E79B83900BC89CD /* Debug */,
@@ -668,7 +668,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5B3A7352E3BCAC800439175 /* Build configuration list for PBXProject "MyNewMessanger" */ = {
+		F5B3A7352E3BCAC800439175 /* Build configuration list for PBXProject "ChatNest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5B3A7432E3BCACA00439175 /* Debug */,
@@ -677,7 +677,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5B3A7452E3BCACA00439175 /* Build configuration list for PBXNativeTarget "MyNewMessanger" */ = {
+		F5B3A7452E3BCACA00439175 /* Build configuration list for PBXNativeTarget "ChatNest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5B3A7462E3BCACA00439175 /* Debug */,
@@ -686,7 +686,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5B6EC052E7C0A390093E8EB /* Build configuration list for PBXNativeTarget "MyNewMessangerUITests" */ = {
+		F5B6EC052E7C0A390093E8EB /* Build configuration list for PBXNativeTarget "ChatNestUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5B6EC032E7C0A390093E8EB /* Debug */,
@@ -695,7 +695,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5B6EC142E7D65CD0093E8EB /* Build configuration list for PBXNativeTarget "MyNewMessanger_UITests" */ = {
+		F5B6EC142E7D65CD0093E8EB /* Build configuration list for PBXNativeTarget "ChatNest_UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5B6EC152E7D65CD0093E8EB /* Debug */,
