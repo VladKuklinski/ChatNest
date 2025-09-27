@@ -1,6 +1,6 @@
-# MyNewMessenger
+# ChatNest
 
-MyNewMessenger is a lightweight and modern chat application built with Swift (SwiftUI + Firebase).  
+ChatNest is a lightweight and modern chat application built with Swift (SwiftUI + Firebase).  
 It allows users to register, send messages, add friends and manage incoming/outgoing requests in real-time.
 
 ## Features
@@ -15,15 +15,15 @@ It allows users to register, send messages, add friends and manage incoming/outg
 <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
 
 
-<img src="https://github.com/Vlad-dot-Kukl/MyNewMessanger/blob/184eb5def6140aa0b67aa95fc8d913cc29e09382/InboxView.png" width="250" height="543" />
-<img src="https://github.com/Vlad-dot-Kukl/MyNewMessanger/blob/184eb5def6140aa0b67aa95fc8d913cc29e09382/ChatView.png" width="250" height="543" />
-<img src="https://github.com/Vlad-dot-Kukl/MyNewMessanger/blob/184eb5def6140aa0b67aa95fc8d913cc29e09382/ContactsView.png" width="250" height="543" />
+<img src="https://github.com/VladKuklinski/ChatNest/blob/b201ad1bb8174c781cb00457d1657277e2312db6/MainView.png" width="250" height="543" />
+<img src="https://github.com/VladKuklinski/ChatNest/blob/b201ad1bb8174c781cb00457d1657277e2312db6/ChatView.png" width="250" height="543" />
+<img src="https://github.com/VladKuklinski/ChatNest/blob/b201ad1bb8174c781cb00457d1657277e2312db6/ContactsView.png" width="250" height="543" />
 <br>
-<img src="https://github.com/Vlad-dot-Kukl/MyNewMessanger/blob/808fc7ceb3a9469e3cbc3641cc41cb55df0addb9/ProfileView.png" width="250" height="543" />
-<img src="https://github.com/Vlad-dot-Kukl/MyNewMessanger/blob/184eb5def6140aa0b67aa95fc8d913cc29e09382/EditingDataView.png" width="250" height="543" />
+<img src="https://github.com/VladKuklinski/ChatNest/blob/b201ad1bb8174c781cb00457d1657277e2312db6/ProfileView.png" width="250" height="543" />
+<img src="https://github.com/VladKuklinski/ChatNest/blob/b201ad1bb8174c781cb00457d1657277e2312db6/EditingDataView.png" width="250" height="543" />
 <br>
-<img src="https://github.com/Vlad-dot-Kukl/MyNewMessanger/blob/184eb5def6140aa0b67aa95fc8d913cc29e09382/RegistrationView.png" width="250" height="543" />
-<img src="https://github.com/Vlad-dot-Kukl/MyNewMessanger/blob/184eb5def6140aa0b67aa95fc8d913cc29e09382/LogInView.png" width="250" height="543" />
+<img src="https://github.com/VladKuklinski/ChatNest/blob/b201ad1bb8174c781cb00457d1657277e2312db6/RegistrationView.png" width="250" height="543" />
+<img src="https://github.com/VladKuklinski/ChatNest/blob/b201ad1bb8174c781cb00457d1657277e2312db6/LoginView.png" width="250" height="543" />
 
 
 </div>
