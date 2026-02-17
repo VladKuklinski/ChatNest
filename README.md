@@ -1,6 +1,6 @@
 # ChatNest
 
-ChatNest is a lightweight and modern chat application built with Swift (SwiftUI + Firebase).  
+ChatNest is a lightweight and modern chat application built with Swift (SwiftUI).  
 It allows users to register, send messages, add friends and manage incoming/outgoing requests in real-time.
 
 ## Features
